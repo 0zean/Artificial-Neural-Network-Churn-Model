@@ -1,4 +1,4 @@
-# Artificial-Neural-Network
+# Artificial-Neural-Network Churn Model
 ANN for predicting if a bank customer will stay or leave.
 
 This project was made for Kirill Eremenko and Hadelin de Ponteves' course on deep learning.
