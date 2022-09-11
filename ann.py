@@ -7,6 +7,7 @@ import warnings
 
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sn
 import pandas as pd
 import tensorflow as tf
 from tensorflow.keras.utils import plot_model
@@ -36,7 +37,9 @@ x = ct.fit_transform(x)
 # Splitting the dataset into training set and test set
 from sklearn.model_selection import train_test_split
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
+x_train, x_test, y_train, y_test = train_test_split(x, y,
+                                                    test_size = 0.2,
+                                                    random_state = 0)
 
 #Feature Scaling
 from sklearn.preprocessing import StandardScaler
@@ -91,6 +94,9 @@ y_pred = (y_pred > 0.5)
 # Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
 
+sn.heatmap(cm, annot=True)
+plt.show()
+
 
 # Plot history of training metrics
 acc = history.history['accuracy']
@@ -139,19 +145,19 @@ from sklearn.model_selection import cross_val_score
 
 def build_classifier():
     classifier = tf.keras.Sequential()
-    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
-    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(tf.keras.layers.Dense(units = 128, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
+    classifier.add(tf.keras.layers.Dense(units = 256, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(tf.keras.layers.Dense(units = 256, kernel_initializer = 'uniform', activation = 'relu'))
     classifier.add(tf.keras.layers.Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 
-classifier = KerasClassifier(build_fn = build_classifier, epochs = 100, batch_size = 10)
+classifier_CV = KerasClassifier(build_fn = build_classifier, epochs = 100, batch_size = 10)
 
-accuracies = cross_val_score(estimator=classifier, X = x_train, y= y_train, cv=10)
+accuracies = cross_val_score(estimator=classifier_CV, X = x_train, y= y_train, cv=10)
 mean = accuracies.mean()
 variance = accuracies.std()
 
-# Improve ANN with Dropout
 
 # Tuning the ANN
 from keras.wrappers.scikit_learn import KerasClassifier
@@ -160,19 +166,20 @@ from sklearn.model_selection import GridSearchCV
 
 def build_classifier(optimizer):
     classifier = tf.keras.Sequential()
-    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
-    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(tf.keras.layers.Dense(units = 128, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
+    classifier.add(tf.keras.layers.Dense(units = 256, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(tf.keras.layers.Dense(units = 256, kernel_initializer = 'uniform', activation = 'relu'))
     classifier.add(tf.keras.layers.Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 
-classifier = KerasClassifier(build_fn = build_classifier)
+classifier_GS = KerasClassifier(build_fn = build_classifier)
 
 parameters = {'batch_size': [25, 32],
               'epochs': [100, 500],
               'optimizer': ['adam', 'rmsprop']}
 
-grid_search = GridSearchCV(estimator = classifier,
+grid_search = GridSearchCV(estimator = classifier_GS,
                            param_grid = parameters,
                            scoring = 'accuracy',
                            cv = 10)
