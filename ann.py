@@ -9,9 +9,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+from tensorflow.keras.utils import plot_model
 from sklearn.metrics import confusion_matrix
 
 warnings.filterwarnings('ignore')
+tf.random.set_seed(123)
 ####### DATA PREPROCESSING ########
 
 # Importing Dataset
@@ -19,8 +21,9 @@ dataset = pd.read_csv("Churn_Modelling.csv")
 x = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values
 
-from sklearn.compose import ColumnTransformer
+
 # Encoding categorical data
+from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 labelencoder_x_1 = LabelEncoder()
@@ -50,18 +53,24 @@ class acc_stop(tf.keras.callbacks.Callback):
             self.model.stop_training = True
 
 classifier = tf.keras.Sequential([
-    tf.keras.layers.Dense(32, activation=tf.nn.relu, input_dim=x_train.shape[1]),
+    tf.keras.layers.Dense(128, activation=tf.nn.relu, input_dim=x_train.shape[1]),
     tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(16, activation=tf.nn.relu),
+    tf.keras.layers.Dense(256, activation=tf.nn.relu),
     tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(10, activation=tf.nn.relu),
-    tf.keras.layers.Dense(7, activation=tf.nn.relu),
+    tf.keras.layers.Dense(256, activation=tf.nn.relu),
+    tf.keras.layers.BatchNormalization(),
     tf.keras.layers.Dense(1, activation=tf.nn.sigmoid)
 ])
 
-classifier.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.RMSprop(learning_rate=0.001), metrics=['accuracy'])
+classifier.summary()
+plot_model(classifier, 'model.png', show_shapes=True)
 
-rlr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, verbose=1)
+classifier.compile(loss='binary_crossentropy',
+                   optimizer='adam',
+                   metrics=['accuracy'])
+
+#rlr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.05, patience=20, verbose=1)
+es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5)
 
 # Fit ANN to training set
 history = classifier.fit(x=x_train, y=y_train,
@@ -69,7 +78,7 @@ history = classifier.fit(x=x_train, y=y_train,
                          validation_data=(x_test, y_test),
                          verbose=1,
                          epochs=200,
-                         callbacks=[acc_stop(), rlr])
+                         callbacks=[acc_stop(), es])
 
 tf.keras.backend.clear_session()
 
@@ -129,10 +138,10 @@ from sklearn.model_selection import cross_val_score
 
 
 def build_classifier():
-    classifier = Sequential()
-    classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
-    classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
-    classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
+    classifier = tf.keras.Sequential()
+    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
+    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(tf.keras.layers.Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 
@@ -150,10 +159,10 @@ from sklearn.model_selection import GridSearchCV
 
 
 def build_classifier(optimizer):
-    classifier = Sequential()
-    classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
-    classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
-    classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
+    classifier = tf.keras.Sequential()
+    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
+    classifier.add(tf.keras.layers.Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(tf.keras.layers.Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 
