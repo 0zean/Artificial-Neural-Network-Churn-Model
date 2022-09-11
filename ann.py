@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import tensorflow as tf
 
 ####### DATA PREPROCESSING ########
 
@@ -35,7 +36,7 @@ x_test = sc.transform(x_test)
 
 # Importing keras libraries
 from keras.models import Sequential
-from keras.layers import Dense 
+from keras.layers import Dense
 from keras.layers import Dropout
 
 # Initaialize the ANN
@@ -121,14 +122,14 @@ def build_classifier(optimizer):
 classifier = KerasClassifier(build_fn = build_classifier)
 
 parameters = {'batch_size': [25, 32],
-              'epochs': [100, 500], 
+              'epochs': [100, 500],
               'optimizer': ['adam', 'rmsprop']}
 
 grid_search = GridSearchCV(estimator = classifier,
-                           param_grid = parameters, 
-                           scoring = 'accuracy', 
+                           param_grid = parameters,
+                           scoring = 'accuracy',
                            cv = 10)
 
 grid_search = grid_search.fit(x_train, y_train)
-best_parameters = grid_search.best_params_ 
+best_parameters = grid_search.best_params_
 best_accuracy = grid_search.best_score_
