@@ -1,14 +1,15 @@
 #Importing Libraries
 import os
+
 os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
 
 import warnings
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import tensorflow as tf
 from sklearn.metrics import confusion_matrix
-
 
 warnings.filterwarnings('ignore')
 ####### DATA PREPROCESSING ########
@@ -18,9 +19,9 @@ dataset = pd.read_csv("Churn_Modelling.csv")
 x = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values
 
+from sklearn.compose import ColumnTransformer
 # Encoding categorical data
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-from sklearn.compose import ColumnTransformer
 
 labelencoder_x_1 = LabelEncoder()
 x[:, 1] = labelencoder_x_1.fit_transform(x[:, 1])
@@ -31,10 +32,12 @@ x = ct.fit_transform(x)
 
 # Splitting the dataset into training set and test set
 from sklearn.model_selection import train_test_split
+
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
 
 #Feature Scaling
 from sklearn.preprocessing import StandardScaler
+
 sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
@@ -124,6 +127,7 @@ new_prediction = (new_prediction > 0.5)
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import cross_val_score
 
+
 def build_classifier():
     classifier = Sequential()
     classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
@@ -143,6 +147,7 @@ variance = accuracies.std()
 # Tuning the ANN
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import GridSearchCV
+
 
 def build_classifier(optimizer):
     classifier = Sequential()
