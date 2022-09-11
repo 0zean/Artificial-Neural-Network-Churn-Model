@@ -40,31 +40,34 @@ x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
 ######## ANN #########
-class myCallback(tf.keras.callbacks.Callback):
+class acc_stop(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs={}):
         if(logs.get('accuracy')>0.995):
             print("\nReached 99.5% accuracy, cancelling training")
             self.model.stop_training = True
 
 classifier = tf.keras.Sequential([
-    tf.keras.layers.Dense(128, activation=tf.nn.relu, input_dim=x_train.shape[1]),
-    tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(64, activation=tf.nn.relu),
-    tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(32, activation=tf.nn.relu),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation=tf.nn.gelu, input_dim=x_train.shape[1]),
+    tf.keras.layers.Dropout(0.1),
+    tf.keras.layers.Dense(32, activation=tf.nn.gelu),
+    tf.keras.layers.Dropout(0.1),
+    tf.keras.layers.Dense(32, activation=tf.nn.gelu),
     tf.keras.layers.Dense(1, activation=tf.nn.sigmoid)
 ])
 
 classifier.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
+rlr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, verbose=1)
+
 
 # Fit ANN to training set
 history = classifier.fit(x=x_train, y=y_train,
-                         batch_size=32,
+                         batch_size=64,
                          validation_data=(x_test, y_test),
                          verbose=1,
                          epochs=200,
-                         callbacks=[myCallback()])
+                         callbacks=[acc_stop(), rlr])
 
 tf.keras.backend.clear_session()
 
