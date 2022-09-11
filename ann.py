@@ -1,9 +1,16 @@
 #Importing Libraries
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
+
+import warnings
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import tensorflow as tf
+from sklearn.metrics import confusion_matrix
 
+
+warnings.filterwarnings('ignore')
 ####### DATA PREPROCESSING ########
 
 # Importing Dataset
@@ -33,31 +40,33 @@ x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
 ######## ANN #########
+class myCallback(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs={}):
+        if(logs.get('accuracy')>0.995):
+            print("\nReached 99.5% accuracy, cancelling training")
+            self.model.stop_training = True
 
-# Importing keras libraries
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import Dropout
+classifier = tf.keras.Sequential([
+    tf.keras.layers.Dense(128, activation=tf.nn.relu, input_dim=x_train.shape[1]),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(64, activation=tf.nn.relu),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation=tf.nn.relu),
+    tf.keras.layers.Dense(1, activation=tf.nn.sigmoid)
+])
 
-# Initaialize the ANN
-classifier = Sequential()
+classifier.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Adding the input layer & first hidden layer with Dropout
-classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = 12))
-classifier.add(Dropout(rate = 0.1))
-
-# Second hidden layer with Dropout
-classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
-classifier.add(Dropout(rate = 0.1))
-
-# Output layer
-classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
-
-# Compile ANN
-classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 # Fit ANN to training set
-classifier.fit(x = x_train, y = y_train, batch_size = 10, epochs = 100)
+history = classifier.fit(x=x_train, y=y_train,
+                         batch_size=32,
+                         validation_data=(x_test, y_test),
+                         verbose=1,
+                         epochs=200,
+                         callbacks=[myCallback()])
+
+tf.keras.backend.clear_session()
 
 ######## PREDICTIONS & EVALUATION ##########
 
@@ -66,8 +75,30 @@ y_pred = classifier.predict(x_test)
 y_pred = (y_pred > 0.5)
 
 # Confusion Matrix
-from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
+
+
+# Plot history of training metrics
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(len(acc))
+
+plt.plot(epochs, acc, 'r', label='Training accuracy')
+plt.plot(epochs, val_acc, 'b', label='Validation accuracy')
+plt.title('Training and validation accuracy')
+plt.legend()
+plt.figure()
+
+plt.plot(epochs, loss, 'r', label='Training Loss')
+plt.plot(epochs, val_loss, 'b', label='Validation Loss')
+plt.title('Training and validation loss')
+plt.legend()
+
+plt.show()
+
 
 # Predicting a single new observation
 
