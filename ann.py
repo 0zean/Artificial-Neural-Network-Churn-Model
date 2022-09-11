@@ -110,7 +110,9 @@ plt.plot(epochs, acc, 'r', label='Training accuracy')
 plt.plot(epochs, val_acc, 'b', label='Validation accuracy')
 plt.title('Training and validation accuracy')
 plt.legend()
-plt.figure()
+
+plt.show()
+plt.savefig('Training_validation_accuracy.png')
 
 plt.plot(epochs, loss, 'r', label='Training Loss')
 plt.plot(epochs, val_loss, 'b', label='Validation Loss')
@@ -118,7 +120,7 @@ plt.title('Training and validation loss')
 plt.legend()
 
 plt.show()
-
+plt.savefig('Training_validation_loss.png')
 
 # Predicting a single new observation
 
