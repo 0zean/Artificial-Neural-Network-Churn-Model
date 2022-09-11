@@ -47,12 +47,12 @@ class acc_stop(tf.keras.callbacks.Callback):
             self.model.stop_training = True
 
 classifier = tf.keras.Sequential([
-    tf.keras.layers.Dense(512, activation=tf.nn.relu, input_dim=x_train.shape[1]),
+    tf.keras.layers.Dense(32, activation=tf.nn.relu, input_dim=x_train.shape[1]),
     tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(128, activation=tf.nn.relu),
+    tf.keras.layers.Dense(16, activation=tf.nn.relu),
     tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(64, activation=tf.nn.relu),
-    tf.keras.layers.Dense(32, activation=tf.nn.relu),
+    tf.keras.layers.Dense(10, activation=tf.nn.relu),
+    tf.keras.layers.Dense(7, activation=tf.nn.relu),
     tf.keras.layers.Dense(1, activation=tf.nn.sigmoid)
 ])
 
