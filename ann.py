@@ -7,11 +7,16 @@ import warnings
 
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sn
 import pandas as pd
+import seaborn as sn
 import tensorflow as tf
-from tensorflow.keras.utils import plot_model
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.compose import ColumnTransformer
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import (GridSearchCV, cross_val_score,
+                                     train_test_split)
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
+from tensorflow.keras.utils import plot_model
 
 warnings.filterwarnings('ignore')
 tf.random.set_seed(123)
@@ -24,8 +29,6 @@ y = dataset.iloc[:, 13].values
 
 
 # Encoding categorical data
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 labelencoder_x_1 = LabelEncoder()
 x[:, 1] = labelencoder_x_1.fit_transform(x[:, 1])
@@ -35,15 +38,11 @@ ct = ColumnTransformer([("Country", OneHotEncoder(), [1])], remainder = 'passthr
 x = ct.fit_transform(x)
 
 # Splitting the dataset into training set and test set
-from sklearn.model_selection import train_test_split
-
 x_train, x_test, y_train, y_test = train_test_split(x, y,
                                                     test_size = 0.2,
                                                     random_state = 0)
 
 #Feature Scaling
-from sklearn.preprocessing import StandardScaler
-
 sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
@@ -55,6 +54,7 @@ class acc_stop(tf.keras.callbacks.Callback):
             print("\nReached 99.5% accuracy, cancelling training")
             self.model.stop_training = True
 
+
 classifier = tf.keras.Sequential([
     tf.keras.layers.Dense(128, activation=tf.nn.relu, input_dim=x_train.shape[1]),
     tf.keras.layers.Dropout(0.2),
@@ -64,6 +64,7 @@ classifier = tf.keras.Sequential([
     tf.keras.layers.BatchNormalization(),
     tf.keras.layers.Dense(1, activation=tf.nn.sigmoid)
 ])
+
 
 classifier.summary()
 plot_model(classifier, 'model.png', show_shapes=True)
@@ -139,8 +140,6 @@ new_prediction = (new_prediction > 0.5)
 ######## Evaluating, Improving, Tuning #########
 
 # Evaluating the ANN
-from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import cross_val_score
 
 
 def build_classifier():
@@ -161,8 +160,6 @@ variance = accuracies.std()
 
 
 # Tuning the ANN
-from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import GridSearchCV
 
 
 def build_classifier(optimizer):
