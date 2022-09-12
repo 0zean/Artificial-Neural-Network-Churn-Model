@@ -69,18 +69,18 @@ classifier.summary()
 plot_model(classifier, 'model.png', show_shapes=True)
 
 classifier.compile(loss='binary_crossentropy',
-                   optimizer='adam',
+                   optimizer=tf.keras.optimizers.RMSprop(),
                    metrics=['accuracy'])
 
 #rlr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.05, patience=20, verbose=1)
-es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5)
+es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=10)
 
 # Fit ANN to training set
 history = classifier.fit(x=x_train, y=y_train,
-                         batch_size=32,
+                         batch_size=25,
                          validation_data=(x_test, y_test),
                          verbose=1,
-                         epochs=200,
+                         epochs=100,
                          callbacks=[acc_stop(), es])
 
 tf.keras.backend.clear_session()
@@ -110,17 +110,15 @@ plt.plot(epochs, acc, 'r', label='Training accuracy')
 plt.plot(epochs, val_acc, 'b', label='Validation accuracy')
 plt.title('Training and validation accuracy')
 plt.legend()
-
-plt.show()
 plt.savefig('Training_validation_accuracy.png')
+plt.show()
 
 plt.plot(epochs, loss, 'r', label='Training Loss')
 plt.plot(epochs, val_loss, 'b', label='Validation Loss')
 plt.title('Training and validation loss')
 plt.legend()
-
-plt.show()
 plt.savefig('Training_validation_loss.png')
+plt.show()
 
 # Predicting a single new observation
 
@@ -154,6 +152,7 @@ def build_classifier():
     classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 
+
 classifier_CV = KerasClassifier(build_fn = build_classifier, epochs = 100, batch_size = 10)
 
 accuracies = cross_val_score(estimator=classifier_CV, X = x_train, y= y_train, cv=10)
@@ -174,6 +173,7 @@ def build_classifier(optimizer):
     classifier.add(tf.keras.layers.Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
+
 
 classifier_GS = KerasClassifier(build_fn = build_classifier)
 
