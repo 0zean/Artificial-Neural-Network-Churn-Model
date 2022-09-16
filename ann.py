@@ -10,12 +10,14 @@ import numpy as np
 import pandas as pd
 import seaborn as sn
 import tensorflow as tf
+import xgboost as xgb
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.compose import ColumnTransformer
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import (GridSearchCV, cross_val_score,
                                      train_test_split)
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
+from sklearn.preprocessing import (LabelEncoder, MinMaxScaler, OneHotEncoder,
+                                   StandardScaler)
 from tensorflow.keras.utils import plot_model
 
 warnings.filterwarnings('ignore')
@@ -43,7 +45,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y,
                                                     random_state = 0)
 
 #Feature Scaling
-sc = StandardScaler()
+sc = MinMaxScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
@@ -59,9 +61,9 @@ classifier = tf.keras.Sequential([
     tf.keras.layers.Dense(128, activation=tf.nn.relu, input_dim=x_train.shape[1]),
     tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(256, activation=tf.nn.relu),
-    tf.keras.layers.Dropout(0.2),
+    #tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(256, activation=tf.nn.relu),
-    tf.keras.layers.BatchNormalization(),
+    #tf.keras.layers.BatchNormalization(),
     tf.keras.layers.Dense(1, activation=tf.nn.sigmoid)
 ])
 
@@ -91,6 +93,8 @@ tf.keras.backend.clear_session()
 # Predicting the test set results
 y_pred = classifier.predict(x_test)
 y_pred = (y_pred > 0.5)
+print(classification_report(y_test, y_pred))
+
 
 # Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
@@ -136,6 +140,18 @@ Estimated Salary: 50000"""
 
 new_prediction = classifier.predict(sc.transform(np.array([[1.0, 0.0, 0.0, 600, 1, 40, 3, 60000, 2, 1, 1, 50000]])))
 new_prediction = (new_prediction > 0.5)
+
+# XGBoost Model Comparison
+XGB_model = xgb.XGBClassifier(learning_rate = 0.1, max_depth = 5, n_estimators = 10)
+XGB_model.fit(x_train, y_train)
+result_train = XGB_model.score(x_train, y_train)
+print("Accuracy : {}".format(result_train))
+
+result_test = XGB_model.score(x_test, y_test)
+print("Accuracy : {}".format(result_test))
+y_predict = XGB_model.predict(x_test)
+print(classification_report(y_test, y_predict))
+
 
 ######## Evaluating, Improving, Tuning #########
 
