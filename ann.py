@@ -11,7 +11,9 @@ import pandas as pd
 import seaborn as sn
 import tensorflow as tf
 import xgboost as xgb
+from xgboost import XGBClassifier
 from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import (GridSearchCV, cross_val_score,
@@ -202,3 +204,16 @@ grid_search = GridSearchCV(estimator = classifier_GS,
 grid_search = grid_search.fit(x_train, y_train)
 best_parameters = grid_search.best_params_
 best_accuracy = grid_search.best_score_
+
+
+# Testing against XGBoost Classifier
+modelXG = XGBClassifier()
+modelXG.fit(x_train, y_train)
+y_pred = modelXG.predict(x_test)
+predictions = [round(value) for value in y_pred]
+accuracy = accuracy_score(y_test, predictions)
+precision = precision_score(y_test, predictions)
+recall = recall_score(y_test, predictions)
+print("Accuracy: %.2f%%" % (accuracy * 100.0))
+print("Precision: %.2f%%" % (precision * 100.0))
+print("Recall: %.2f%%" % (recall * 100.0))
