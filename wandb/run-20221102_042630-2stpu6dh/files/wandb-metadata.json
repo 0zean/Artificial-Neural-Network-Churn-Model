@@ -1,0 +1,23 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.5",
+    "heartbeatAt": "2022-11-02T08:26:30.558530",
+    "startedAt": "2022-11-02T08:26:30.058487",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1060 6GB",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/0zean/Artificial-Neural-Network-Churn-Model.git",
+        "commit": "7a20ee92f63b9b911a5606537a0d51e1708892f5"
+    },
+    "email": "npicini@optonline.net",
+    "root": "C:/Users/Nick/Documents/GitHub/Artificial-Neural-Network-Churn-Model",
+    "host": "DESKTOP-67SVI6F",
+    "username": "Nick",
+    "executable": "C:\\Program Files\\Python38\\python.exe"
+}

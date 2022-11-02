@@ -1,0 +1,465 @@
+2022-11-02 04:26:30,075 INFO    StreamThr :19508 [internal.py:wandb_internal():88] W&B internal server running at pid: 19508, started at: 2022-11-02 04:26:30.073508
+2022-11-02 04:26:30,077 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: status
+2022-11-02 04:26:30,079 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: status
+2022-11-02 04:26:30,087 INFO    WriterThread:19508 [datastore.py:open_for_write():75] open: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\run-2stpu6dh.wandb
+2022-11-02 04:26:30,087 DEBUG   SenderThread:19508 [sender.py:send():303] send: header
+2022-11-02 04:26:30,132 DEBUG   SenderThread:19508 [sender.py:send():303] send: run
+2022-11-02 04:26:30,419 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: check_version
+2022-11-02 04:26:30,421 INFO    SenderThread:19508 [dir_watcher.py:__init__():216] watching files in: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files
+2022-11-02 04:26:30,421 INFO    SenderThread:19508 [sender.py:_start_run_threads():928] run started: 2stpu6dh with start time 1667377590.07251
+2022-11-02 04:26:30,421 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:26:30,421 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:26:30,421 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: check_version
+2022-11-02 04:26:30,536 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: run_start
+2022-11-02 04:26:30,558 DEBUG   HandlerThread:19508 [meta.py:__init__():34] meta init
+2022-11-02 04:26:30,558 DEBUG   HandlerThread:19508 [meta.py:__init__():49] meta init done
+2022-11-02 04:26:30,558 DEBUG   HandlerThread:19508 [meta.py:probe():215] probe
+2022-11-02 04:26:30,569 DEBUG   HandlerThread:19508 [meta.py:_setup_git():205] setup git
+2022-11-02 04:26:30,649 DEBUG   HandlerThread:19508 [meta.py:_setup_git():212] setup git done
+2022-11-02 04:26:30,649 DEBUG   HandlerThread:19508 [meta.py:_save_pip():53] save pip
+2022-11-02 04:26:30,650 DEBUG   HandlerThread:19508 [meta.py:_save_pip():67] save pip done
+2022-11-02 04:26:30,650 DEBUG   HandlerThread:19508 [meta.py:probe():253] probe done
+2022-11-02 04:26:30,755 DEBUG   SenderThread:19508 [sender.py:send():303] send: files
+2022-11-02 04:26:30,755 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-02 04:26:30,757 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:26:30,757 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:26:30,865 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:26:31,189 INFO    Thread-23 :19508 [upload_job.py:push():143] Uploaded file C:\Users\Nick\AppData\Local\Temp\tmpa0is1lrwwandb\3eq5cfuc-wandb-metadata.json
+2022-11-02 04:26:31,207 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:26:31,219 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:26:31,355 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:26:31,358 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:31,359 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:31,434 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:26:31,435 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:26:31,435 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:26:31,436 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\requirements.txt
+2022-11-02 04:26:31,436 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-metadata.json
+2022-11-02 04:26:33,448 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:26:43,051 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:26:43,051 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:26:43,088 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:43,088 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:43,220 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:26:45,873 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:26:45,873 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:26:46,393 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:26:46,393 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:26:46,413 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:46,413 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:46,450 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:26:48,815 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:26:48,815 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:26:48,826 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:48,826 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:48,875 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:26:51,210 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:26:51,211 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:26:51,212 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:51,212 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:51,270 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:26:54,131 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:26:54,131 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:26:55,967 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:55,967 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:56,053 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:26:58,927 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:26:58,927 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:26:59,214 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:26:59,214 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:26:59,316 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:27:00,696 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\config.yaml
+2022-11-02 04:27:00,992 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:27:00,992 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:27:01,707 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:02,398 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:27:02,398 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:27:02,399 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:27:02,399 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:27:02,452 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:27:04,353 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:27:04,354 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:27:04,355 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:27:04,355 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:27:04,413 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:27:16,100 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:27:16,100 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:27:31,243 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:27:31,243 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:27:44,983 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:27:44,983 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:27:44,985 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:27:44,986 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:27:44,987 DEBUG   SenderThread:19508 [sender.py:send():303] send: files
+2022-11-02 04:27:44,987 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file model-best.h5 with policy live
+2022-11-02 04:27:44,988 DEBUG   SenderThread:19508 [sender.py:send():303] send: telemetry
+2022-11-02 04:27:44,988 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: get_summary
+2022-11-02 04:27:45,573 DEBUG   SenderThread:19508 [sender.py:send():303] send: files
+2022-11-02 04:27:45,573 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file media\graph\graph_summary_db882165298e395bd9e6.graph.json with policy now
+2022-11-02 04:27:45,574 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:45,574 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:46,024 INFO    Thread-33 :19508 [upload_job.py:push():143] Uploaded file C:\Users\Nick\AppData\Local\Temp\tmpa0is1lrwwandb\2vtu7uut-media/graph/graph_summary_db882165298e395bd9e6.graph.json
+2022-11-02 04:27:46,077 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:46,077 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:46,078 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:46,078 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:46,079 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:46,079 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:46,079 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:46,079 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:46,080 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:46,123 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:46,123 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:27:46,123 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:46,124 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\media\graph\graph_summary_db882165298e395bd9e6.graph.json
+2022-11-02 04:27:46,124 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\media\graph
+2022-11-02 04:27:46,124 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\media
+2022-11-02 04:27:46,388 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:27:46,388 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:27:46,827 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:46,827 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:27:47,012 INFO    Thread-34 :19508 [upload_job.py:push():143] Uploaded file C:\Users\Nick\AppData\Local\Temp\tmpa0is1lrwwandb\13ciz07i-model-best.h5
+2022-11-02 04:27:47,279 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:47,280 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:47,670 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:47,671 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:47,785 INFO    Thread-39 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\d3\c32162ca678eb02d2600b0a7586760
+2022-11-02 04:27:47,795 INFO    Thread-36 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:27:47,827 INFO    Thread-37 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\ef\55fb115e281b470ab3926edf963b55
+2022-11-02 04:27:48,147 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:48,147 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:48,147 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best\variables\variables.data-00000-of-00001
+2022-11-02 04:27:48,147 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best\saved_model.pb
+2022-11-02 04:27:48,148 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best\variables\variables.index
+2022-11-02 04:27:48,148 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best\variables
+2022-11-02 04:27:48,148 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best
+2022-11-02 04:27:48,148 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best\assets
+2022-11-02 04:27:48,292 INFO    Thread-38 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\af\6cc9a16a1e51c90199d479a75fc1ae
+2022-11-02 04:27:48,329 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:48,759 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:48,759 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:49,048 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDQ0', 'digest': '663c7e2fc9db1a7fb88bdbae2a6b5e3c', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': None}, 'version': 'latest'}
+2022-11-02 04:27:49,049 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:49,049 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:49,050 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:49,050 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:49,050 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:49,051 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:49,051 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:49,051 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:49,052 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:49,052 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:49,052 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:27:49,155 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:27:49,156 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:49,393 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:49,860 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:49,861 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:49,994 INFO    Thread-41 :19508 [upload_job.py:push():98] Skipped uploading C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:27:50,169 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:50,169 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:50,213 INFO    Thread-44 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\ec\fdb1eddb206659964a6ebf36fc86a2
+2022-11-02 04:27:50,240 INFO    Thread-42 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\90\32a2e309f7b4285f5ddc829f30ea24
+2022-11-02 04:27:50,619 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:50,727 INFO    Thread-43 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\82\50bd1a555e8df13be464b6df9c9385
+2022-11-02 04:27:51,029 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:51,030 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:51,181 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:51,429 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:51,429 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:51,498 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDU4', 'digest': '191ea591cb149f92876d91c0ec2a0e01', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDQ0', 'versionIndex': 0}}, 'version': 'latest'}
+2022-11-02 04:27:51,498 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:51,498 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:51,499 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:51,499 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:51,500 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:51,500 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:51,501 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:51,501 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:27:52,090 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:52,191 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:27:52,191 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:52,276 INFO    Thread-46 :19508 [upload_job.py:push():98] Skipped uploading C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:27:52,489 INFO    Thread-49 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\d1\035a580c0cce15124a1fbc9a2eef74
+2022-11-02 04:27:52,529 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:52,529 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:52,545 INFO    Thread-47 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\25\186c094cbdae694677d43e72cb6a4c
+2022-11-02 04:27:53,007 INFO    Thread-48 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\48\0272ffbb1c847d99352fa04939bfb3
+2022-11-02 04:27:53,157 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:53,195 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:53,195 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:53,613 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:53,613 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:53,815 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDc2', 'digest': '804eefba19ab10d62d77ad2a45cabe07', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDU4', 'versionIndex': 1}}, 'version': 'latest'}
+2022-11-02 04:27:53,816 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:53,816 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:53,817 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:53,817 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:53,818 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:53,818 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:53,819 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:53,819 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:27:54,024 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:54,026 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:54,205 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:54,207 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:27:54,424 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:54,425 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:54,468 INFO    Thread-51 :19508 [upload_job.py:push():98] Skipped uploading C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:27:54,689 INFO    Thread-54 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\62\c1f967011341e6d2d97cc625184470
+2022-11-02 04:27:54,734 INFO    Thread-52 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\ae\b64e5ce03c04007dd22a0757870d5e
+2022-11-02 04:27:54,830 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:54,831 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:55,200 INFO    Thread-53 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\74\7a74178e9fcfe14a9fca4e146a2968
+2022-11-02 04:27:55,218 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:55,236 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:55,236 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:55,646 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:55,646 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:55,935 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDk1', 'digest': '7c648c5cf6c7009fab5f4d88b4892008', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDc2', 'versionIndex': 2}}, 'version': 'latest'}
+2022-11-02 04:27:55,935 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:55,936 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:55,937 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:55,937 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:55,937 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:55,938 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:55,939 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:55,939 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:55,940 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:55,940 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:55,941 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:27:56,128 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:56,128 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:56,230 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:56,230 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:27:56,230 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\model-best.h5
+2022-11-02 04:27:56,792 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: log_artifact
+2022-11-02 04:27:56,869 INFO    Thread-56 :19508 [upload_job.py:push():98] Skipped uploading C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:27:57,094 INFO    Thread-59 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\17\19f024f3a82f71b021f11f3b64c262
+2022-11-02 04:27:57,169 INFO    Thread-57 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\71\8d8726b1e11a7952acc3dacad0527e
+2022-11-02 04:27:57,243 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:57,246 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:57,246 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:57,599 INFO    Thread-58 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\f6\e9e6565efdff473bff8396680b9f82
+2022-11-02 04:27:57,676 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:57,677 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:58,081 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:58,081 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:58,258 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:58,392 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NTA3', 'digest': 'd16fc2ea4a369c2117f7d8e9ac8d3669', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjcxMjA4NDk1', 'versionIndex': 3}}, 'version': 'latest'}
+2022-11-02 04:27:58,392 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:27:58,393 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:58,394 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:58,395 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:58,395 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:58,395 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:27:58,396 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:27:58,396 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:27:58,506 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:58,507 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:58,952 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:58,953 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:59,029 INFO    Thread-61 :19508 [upload_job.py:push():98] Skipped uploading C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:27:59,244 INFO    Thread-64 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\45\3f890e14db9026ac80d3d073aa4770
+2022-11-02 04:27:59,269 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:27:59,269 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:27:59,298 INFO    Thread-62 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\f0\676a03dfe7bc121860bf5dc7e6ef80
+2022-11-02 04:27:59,369 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:59,369 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:59,752 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:59,753 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:27:59,767 INFO    Thread-63 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\63\c9a3cea78673dc96add94fd29bc47d
+2022-11-02 04:28:00,138 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:28:00,138 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:28:00,278 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:28:00,567 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:28:00,567 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:28:00,584 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NTMz', 'digest': 'c930b0278ab602d3b926a8da0231c209', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjcxMjA4NTA3', 'versionIndex': 4}}, 'version': 'latest'}
+2022-11-02 04:28:00,585 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,585 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,587 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,588 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,588 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,589 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,590 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,590 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,591 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,592 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,592 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,592 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,593 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,593 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,594 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,594 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,594 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,596 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,597 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:00,597 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,598 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,598 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,599 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,599 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:00,599 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:00,600 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: log_artifact
+2022-11-02 04:28:00,995 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:28:00,996 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-02 04:28:00,997 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:28:00,997 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:28:01,289 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:28:01,290 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:28:01,323 INFO    Thread-66 :19508 [upload_job.py:push():98] Skipped uploading C:\Users\Nick\.cache\wandb\artifacts\obj\md5\14\883f85a18f4ab4ac26a3d4e55b547a
+2022-11-02 04:28:01,535 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:28:01,545 INFO    Thread-69 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\8f\7429f6c948bb1c00421024f8d17150
+2022-11-02 04:28:01,572 INFO    Thread-67 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\f0\98428828c520d7dddb9914abb1db77
+2022-11-02 04:28:02,056 INFO    Thread-68 :19508 [upload_job.py:push():101] Uploaded file C:\Users\Nick\.cache\wandb\artifacts\obj\md5\97\3f4862c4edabb070b9fbd0883492b1
+2022-11-02 04:28:02,300 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:28:04,994 INFO    SenderThread:19508 [sender.py:send_request_log_artifact():1222] logged artifact model-dashing-grass-2 - {'id': 'QXJ0aWZhY3Q6MjcxMjA4NTUy', 'digest': '710692ec9d150cde0d62b137adb3b0f2', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ0MDI4MzQ1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjcxMjA4NTMz', 'versionIndex': 5}}, 'version': 'latest'}
+2022-11-02 04:28:05,136 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,136 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,137 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,137 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,137 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,138 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,138 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,138 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,138 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,139 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,139 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,139 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,140 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,140 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,140 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,141 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,141 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,141 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,142 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,142 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,142 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,143 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,143 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,143 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,144 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,144 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,144 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,145 DEBUG   SenderThread:19508 [sender.py:send():303] send: history
+2022-11-02 04:28:05,145 DEBUG   SenderThread:19508 [sender.py:send():303] send: summary
+2022-11-02 04:28:05,145 INFO    SenderThread:19508 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-02 04:28:05,146 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:28:05,146 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:28:05,328 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\wandb-summary.json
+2022-11-02 04:28:05,328 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\config.yaml
+2022-11-02 04:28:07,357 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:28:18,027 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:28:18,027 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:28:18,034 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:28:18,034 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:28:18,088 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:28:20,259 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:28:20,259 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:28:20,864 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:28:20,864 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:28:20,989 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:28:20,989 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:28:21,041 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:28:21,469 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:28:35,407 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:28:35,407 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:28:48,097 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:28:48,097 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:28:48,100 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:28:48,100 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:28:48,157 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:28:50,547 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:28:50,547 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:28:52,083 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:28:52,083 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:28:52,241 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:28:52,242 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:28:52,354 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:03,875 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:03,875 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:03,876 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:03,876 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:03,938 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:05,680 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:29:05,680 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:29:08,093 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:08,093 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:08,095 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:08,095 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:08,149 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:10,483 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:10,483 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:10,611 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:10,611 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:10,647 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:16,713 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:16,713 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:16,830 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:16,830 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:16,880 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:20,831 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:29:20,831 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:29:21,723 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:21,724 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:21,764 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:21,764 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:21,887 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:33,372 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:33,372 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:33,452 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:33,453 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:33,555 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:34,222 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:29:35,971 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:29:35,971 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:29:37,428 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:29:37,428 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:29:37,442 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:29:37,442 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:29:37,515 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:29:38,260 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:29:51,115 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:29:51,115 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:30:06,238 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:30:06,238 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:30:10,078 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: resume
+2022-11-02 04:30:10,078 INFO    HandlerThread:19508 [handler.py:handle_request_resume():687] starting system metrics thread
+2022-11-02 04:30:10,600 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: pause
+2022-11-02 04:30:10,600 INFO    HandlerThread:19508 [handler.py:handle_request_pause():696] stopping system metrics thread
+2022-11-02 04:30:10,706 DEBUG   SenderThread:19508 [sender.py:send():303] send: stats
+2022-11-02 04:30:12,627 INFO    Thread-17 :19508 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\Nick\Documents\GitHub\Artificial-Neural-Network-Churn-Model\wandb\run-20221102_042630-2stpu6dh\files\output.log
+2022-11-02 04:30:21,374 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:30:21,374 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:30:36,517 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:30:36,517 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:30:51,687 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:30:51,687 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:31:06,848 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:31:06,848 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:31:21,996 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:31:21,996 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:31:37,131 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:31:37,131 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:31:52,272 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:31:52,272 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:32:07,416 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:32:07,416 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:32:22,575 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:32:22,575 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:32:37,743 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:32:37,743 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:32:52,887 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:32:52,887 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:33:08,007 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:33:08,008 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:33:23,130 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:33:23,131 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:33:38,273 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:33:38,273 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:33:53,405 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:33:53,405 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:34:08,527 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:34:08,527 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:34:23,675 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:34:23,675 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
