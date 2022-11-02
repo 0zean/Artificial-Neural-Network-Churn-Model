@@ -5,6 +5,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
 
 import warnings
 
+import wandb
+from wandb.keras import WandbCallback
+wandb.init(project="ANN Churn Model", entity="npicini")
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -80,13 +84,18 @@ classifier.compile(loss='binary_crossentropy',
 #rlr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.05, patience=20, verbose=1)
 es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=10)
 
+wandb.config = {
+  "epochs": 100,
+  "batch_size": 25
+}
+
 # Fit ANN to training set
 history = classifier.fit(x=x_train, y=y_train,
                          batch_size=25,
                          validation_data=(x_test, y_test),
                          verbose=1,
                          epochs=100,
-                         callbacks=[acc_stop(), es])
+                         callbacks=[acc_stop(), es, WandbCallback()])
 
 tf.keras.backend.clear_session()
 
