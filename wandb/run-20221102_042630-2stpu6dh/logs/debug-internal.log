@@ -463,3 +463,35 @@
 2022-11-02 04:34:08,527 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
 2022-11-02 04:34:23,675 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
 2022-11-02 04:34:23,675 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:34:38,806 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:34:38,806 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:34:53,951 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:34:53,951 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:35:09,092 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:35:09,092 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:35:24,218 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:35:24,218 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:35:39,368 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:35:39,368 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:35:54,517 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:35:54,517 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:36:09,660 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:36:09,660 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:36:24,808 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:36:24,808 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:36:40,001 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:36:40,001 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:36:55,154 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:36:55,154 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:37:10,292 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:37:10,292 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:37:25,418 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:37:25,418 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:37:40,561 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:37:40,561 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:37:55,720 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:37:55,720 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:38:10,895 DEBUG   HandlerThread:19508 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-02 04:38:10,895 DEBUG   SenderThread:19508 [sender.py:send_request():317] send_request: stop_status
+2022-11-02 04:38:20,444 INFO    MainThread:19508 [internal.py:handle_exit():78] Internal process exited
+2022-11-02 04:38:20,444 WARNING MsgRouterThr:19508 [router.py:message_loop():74] EOFError seen in message_loop
