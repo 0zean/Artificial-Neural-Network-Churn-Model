@@ -15,6 +15,7 @@ import pandas as pd
 import seaborn as sn
 import tensorflow as tf
 import xgboost as xgb
+from imblearn.combine import SMOTEENN
 from xgboost import XGBClassifier
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score
@@ -32,12 +33,17 @@ tf.random.set_seed(123)
 
 # Importing Dataset
 dataset = pd.read_csv("Churn_Modelling.csv")
+
+fig = plt.figure()
+dataset['Exited'].value_counts(normalize = True).plot(kind='bar', color= ['skyblue','navy'], alpha = 0.9, rot=0)
+plt.title('15 Min Delay: No(0) and Yes(1) in the Imbalanced Dataset')
+plt.show()
+
 x = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values
 
 
 # Encoding categorical data
-
 labelencoder_x_1 = LabelEncoder()
 x[:, 1] = labelencoder_x_1.fit_transform(x[:, 1])
 labelencoder_x_2 = LabelEncoder()
@@ -45,10 +51,18 @@ x[:, 2] = labelencoder_x_2.fit_transform(x[:, 2])
 ct = ColumnTransformer([("Country", OneHotEncoder(), [1])], remainder = 'passthrough')
 x = ct.fit_transform(x)
 
+
+# Using synthetic over-sampling if minority class and ENN under-sampling of
+# majority class imbalanced class to address imabalanced dataset
+sme = SMOTEENN(random_state=123)
+x, y = sme.fit_resample(x, y)
+
+
 # Splitting the dataset into training set and test set
 x_train, x_test, y_train, y_test = train_test_split(x, y,
                                                     test_size = 0.2,
-                                                    random_state = 0)
+                                                    random_state = 43,
+                                                    shuffle=True)
 
 #Feature Scaling
 sc = MinMaxScaler()
@@ -95,7 +109,7 @@ history = classifier.fit(x=x_train, y=y_train,
                          validation_data=(x_test, y_test),
                          verbose=1,
                          epochs=100,
-                         callbacks=[acc_stop(), es, WandbCallback()])
+                         callbacks=[acc_stop(), es])  # WandbCallback()
 
 tf.keras.backend.clear_session()
 
@@ -153,7 +167,7 @@ new_prediction = classifier.predict(sc.transform(np.array([[1.0, 0.0, 0.0, 600, 
 new_prediction = (new_prediction > 0.5)
 
 # XGBoost Model Comparison
-XGB_model = xgb.XGBClassifier(learning_rate = 0.1, max_depth = 5, n_estimators = 10)
+XGB_model = xgb.XGBClassifier(learning_rate = 0.1, max_depth = 7, n_estimators = 12)
 XGB_model.fit(x_train, y_train)
 result_train = XGB_model.score(x_train, y_train)
 print("Accuracy : {}".format(result_train))
@@ -213,6 +227,23 @@ grid_search = GridSearchCV(estimator = classifier_GS,
 grid_search = grid_search.fit(x_train, y_train)
 best_parameters = grid_search.best_params_
 best_accuracy = grid_search.best_score_
+
+
+# Best Params 25, 500, adam
+classifier.compile(loss='binary_crossentropy',
+                   optimizer=tf.keras.optimizers.Adam(),
+                   metrics=['accuracy'])
+
+history = classifier.fit(x=x_train, y=y_train,
+                         batch_size=25,
+                         validation_data=(x_test, y_test),
+                         verbose=1,
+                         epochs=500,
+                         callbacks=[acc_stop()])
+
+y_pred_Best = classifier.predict(x_test)
+y_pred_Best = (y_pred > 0.5)
+print(classification_report(y_test, y_pred_Best))
 
 
 # Testing against XGBoost Classifier
